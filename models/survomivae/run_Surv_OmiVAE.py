@@ -51,19 +51,19 @@ Initial_Learning_Rate = [0.05, 0.01, 0.0075, 0.005, 0.0025]
 
 best_epoch_num = 0
 
-patient_id_train, x_train_gene, ytime_train, yevent_train, age_train, stage_i_train, stage_ii_train, race_white_train = load_data("data_train_gene_minmax_tune_1.csv", dtype)
-patient_id_valid, x_valid_gene, ytime_valid, yevent_valid, age_valid, stage_i_valid, stage_ii_valid, race_white_valid = load_data("data_valid_gene_minmax_tune_1.csv", dtype)
-pathway_mask_tune = load_pathway("pathway_mask.csv", dtype)
+patient_id_train, x_train_gene, ytime_train, yevent_train, age_train, stage_i_train, stage_ii_train, race_white_train = load_data("tune/data_train_gene_minmax_tune.csv", dtype)
+patient_id_valid, x_valid_gene, ytime_valid, yevent_valid, age_valid, stage_i_valid, stage_ii_valid, race_white_valid = load_data("tune/data_valid_gene_minmax_tune.csv", dtype)
+pathway_mask_tune = load_pathway("tune/pathway_mask.csv", dtype)
 
-_, x_train_mirna, _, _, _, _, _, _ = load_data("data_train_mirna_minmax_tune_1.csv", dtype)
-_, x_valid_mirna, _, _, _, _, _, _ = load_data("data_valid_mirna_minmax_tune_1.csv", dtype)
+_, x_train_mirna, _, _, _, _, _, _ = load_data("tune/data_train_mirna_minmax_tune.csv", dtype)
+_, x_valid_mirna, _, _, _, _, _, _ = load_data("tune/data_valid_mirna_minmax_tune.csv", dtype)
 
-patient_id_train_overall, x_train_gene_overall, ytime_train_overall, yevent_train_overall, age_train_overall, stage_i_train_overall, stage_ii_train_overall, race_white_train_overall = load_data("data_train_gene_minmax_overall.csv", dtype)
-patient_id_test_overall, x_test_gene_overall, ytime_test_overall, yevent_test_overall, age_test_overall, stage_i_test_overall, stage_ii_test_overall, race_white_test_overall = load_data("data_test_gene_minmax_overall.csv", dtype)
-pathway_mask_test = load_pathway("pathway_mask.csv", dtype)
+patient_id_train_overall, x_train_gene_overall, ytime_train_overall, yevent_train_overall, age_train_overall, stage_i_train_overall, stage_ii_train_overall, race_white_train_overall = load_data("train_test_split/data_train_gene_minmax_overall.csv", dtype)
+patient_id_test_overall, x_test_gene_overall, ytime_test_overall, yevent_test_overall, age_test_overall, stage_i_test_overall, stage_ii_test_overall, race_white_test_overall = load_data("train_test_split/data_test_gene_minmax_overall.csv", dtype)
+pathway_mask_test = load_pathway("train_test_split/pathway_mask.csv", dtype)
 
-_, x_train_mirna_overall, _, _, _, _, _, _ = load_data("data_train_mirna_minmax_overall.csv", dtype)
-_, x_test_mirna_overall, _, _, _, _, _, _ = load_data("data_test_mirna_minmax_overall.csv", dtype)
+_, x_train_mirna_overall, _, _, _, _, _, _ = load_data("train_test_split/data_train_mirna_minmax_overall.csv", dtype)
+_, x_test_mirna_overall, _, _, _, _, _, _ = load_data("train_test_split/data_test_mirna_minmax_overall.csv", dtype)
 
 opt_l2 = 0.
 opt_lr = 0.
