@@ -36,11 +36,11 @@ Dropout_rate_2 = [0.1, 0.3, 0.5]
 
 best_epoch_num = 0
 
-patient_id_train, x_train, ytime_train, yevent_train, age_train, stage_i_train, stage_ii_train, race_white_train = load_data("tune_tr_z_2omics_1.csv", dtype)
-patient_id_valid, x_valid, ytime_valid, yevent_valid, age_valid, stage_i_valid, stage_ii_valid, race_white_valid = load_data("tune_val_z_2omics_1.csv", dtype)
+patient_id_train, x_train, ytime_train, yevent_train, age_train, stage_i_train, stage_ii_train, race_white_train = load_data("tune_tr_z_2omics.csv", dtype)
+patient_id_valid, x_valid, ytime_valid, yevent_valid, age_valid, stage_i_valid, stage_ii_valid, race_white_valid = load_data("tune_val_z_2omics.csv", dtype)
 
-patient_id_train_overall, x_train_overall, ytime_train_overall, yevent_train_overall, age_train_overall, stage_i_train_overall, stage_ii_train_overall, race_white_train_overall = load_data("tr_z_2omics_1.csv", dtype)
-patient_id_test_overall, x_test_overall, ytime_test_overall, yevent_test_overall, age_test_overall, stage_i_test_overall, stage_ii_test_overall, race_white_test_overall = load_data("tes_z_2omics_1.csv", dtype)
+patient_id_train_overall, x_train_overall, ytime_train_overall, yevent_train_overall, age_train_overall, stage_i_train_overall, stage_ii_train_overall, race_white_train_overall = load_data("tr_z_2omics.csv", dtype)
+patient_id_test_overall, x_test_overall, ytime_test_overall, yevent_test_overall, age_test_overall, stage_i_test_overall, stage_ii_test_overall, race_white_test_overall = load_data("tes_z_2omics.csv", dtype)
 opt_l2 = 0
 opt_lr = 0
 opt_dim = 0
