@@ -52,8 +52,8 @@ def load_pathway(path, dtype):
 # In[ ]:
 
 
-train_data_gene = pd.read_csv("data_train_gene_minmax_overall.csv")
-train_data_mirna = pd.read_csv("data_train_mirna_minmax_overall.csv")
+train_data_gene = pd.read_csv("train_test_split/minmax_normalized/data_train_gene_minmax_overall.csv")
+train_data_mirna = pd.read_csv("train_test_split/minmax_normalized/data_train_mirna_minmax_overall.csv")
 
 gene_names = list(train_data_gene.columns)[7:]
 mirna_names = list(train_data_mirna.columns)[7:]
@@ -70,10 +70,10 @@ lower_data = pd.read_csv("saved_models/lower_PI_train.csv")
 # In[ ]:
 
 
-pathway_mask = pd.read_csv("pathway_mask.csv", index_col = 0)
+pathway_mask = pd.read_csv("train_test_split/minmax_normalized/pathway_mask.csv", index_col = 0)
 pathway_names = list(pathway_mask.columns)
 mask_names = pathway_names + mirna_names
-pathway_mask_int = load_pathway("pathway_mask.csv", dtype)
+pathway_mask_int = load_pathway("train_test_split/minmax_normalized/pathway_mask.csv", dtype)
 
 
 # In[ ]:
