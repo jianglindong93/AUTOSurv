@@ -37,12 +37,12 @@ CUTTING_RATIO = [0.3, 0.5, 0.7, 0.9]
 Initial_Learning_Rate = [0.1, 0.05, 0.005, 0.001]
 L2_Lambda = [0.1, 0.05, 0.005, 0.0005]
 
-patient_id_train, x_train_gene, ytime_train, yevent_train, age_train, stage_i_train, stage_ii_train, race_white_train = load_data("tune_1/minmax_normalized/data_train_gene_minmax_tune_1.csv", dtype)
-patient_id_valid, x_valid_gene, ytime_valid, yevent_valid, age_valid, stage_i_valid, stage_ii_valid, race_white_valid = load_data("tune_1/minmax_normalized/data_valid_gene_minmax_tune_1.csv", dtype)
-pathway_mask_tune = load_pathway("tune_1/minmax_normalized/pathway_mask.csv", dtype)
+patient_id_train, x_train_gene, ytime_train, yevent_train, age_train, stage_i_train, stage_ii_train, race_white_train = load_data("tune/minmax_normalized/data_train_gene_minmax_tune.csv", dtype)
+patient_id_valid, x_valid_gene, ytime_valid, yevent_valid, age_valid, stage_i_valid, stage_ii_valid, race_white_valid = load_data("tune/minmax_normalized/data_valid_gene_minmax_tune.csv", dtype)
+pathway_mask_tune = load_pathway("tune/minmax_normalized/pathway_mask.csv", dtype)
 
-_, x_train_mirna, _, _, _, _, _, _ = load_data("tune_1/minmax_normalized/data_train_mirna_minmax_tune_1.csv", dtype)
-_, x_valid_mirna, _, _, _, _, _, _ = load_data("tune_1/minmax_normalized/data_valid_mirna_minmax_tune_1.csv", dtype)
+_, x_train_mirna, _, _, _, _, _, _ = load_data("tune/minmax_normalized/data_train_mirna_minmax_tune.csv", dtype)
+_, x_valid_mirna, _, _, _, _, _, _ = load_data("tune/minmax_normalized/data_valid_mirna_minmax_tune.csv", dtype)
 
 patient_id_train_overall, x_train_gene_overall, ytime_train_overall, yevent_train_overall, age_train_overall, stage_i_train_overall, stage_ii_train_overall, race_white_train_overall = load_data("train_test_split/minmax_normalized/data_train_gene_minmax_overall.csv", dtype)
 patient_id_test_overall, x_test_gene_overall, ytime_test_overall, yevent_test_overall, age_test_overall, stage_i_test_overall, stage_ii_test_overall, race_white_test_overall = load_data("train_test_split/minmax_normalized/data_test_gene_minmax_overall.csv", dtype)
@@ -119,10 +119,10 @@ tune_id_valid = get_match_id(patient_id_train_overall, patient_id_valid)
 processed_tr_tune = processed_tr.iloc[tune_id_train]
 processed_val_tune = processed_tr.iloc[tune_id_valid]
 
-processed_tr.to_csv("tr_z_2omics_1.csv", index=False)
-processed_tr_tune.to_csv("tune_tr_z_2omics_1.csv", index=False)
-processed_val_tune.to_csv("tune_val_z_2omics_1.csv", index=False)
-processed_tes.to_csv("tes_z_2omics_1.csv", index=False)
+processed_tr.to_csv("tr_z_2omics.csv", index=False)
+processed_tr_tune.to_csv("tune_tr_z_2omics.csv", index=False)
+processed_val_tune.to_csv("tune_val_z_2omics.csv", index=False)
+processed_tes.to_csv("tes_z_2omics.csv", index=False)
 
 
 # In[ ]:
