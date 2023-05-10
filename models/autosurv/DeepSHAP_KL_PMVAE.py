@@ -702,10 +702,15 @@ for item in imp_features_cache:
 
 # In[ ]:
 
-big_freq_summary = pd.DataFrame.from_dict(freq, orient ='index')
 
-big_freq_summary.to_csv("saved_models/top6Z_impinput.csv", index=False)
-#big_freq_summary.to_csv("saved_models/top6Z_imp1sthidden.csv", index=False)
+freq_summary = pd.DataFrame.from_dict(freq, orient ='index')
+freq_summary.columns = ['Frequency']
+freq_summary.sort_values(by=['Frequency'], ascending=False, inplace=True)
+big_freq_summary = freq_summary[freq_summary['Frequency'] > 1]
+
+big_freq_summary.to_csv("saved_models/top6Z_over1_impinput.csv")
+#big_freq_summary.to_csv("saved_models/top6Z_over1_imp1sthidden.csv")
+
 
 # In[ ]:
 
