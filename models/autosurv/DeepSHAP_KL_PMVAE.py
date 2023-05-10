@@ -702,9 +702,10 @@ for item in imp_features_cache:
 
 # In[ ]:
 
+big_freq_summary = pd.DataFrame.from_dict(freq, orient ='index')
 
 big_freq_summary.to_csv("saved_models/top6Z_impinput.csv", index=False)
-
+#big_freq_summary.to_csv("saved_models/top6Z_imp1sthidden.csv", index=False)
 
 # In[ ]:
 
