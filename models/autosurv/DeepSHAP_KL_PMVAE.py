@@ -719,6 +719,7 @@ big_freq_summary.to_csv("saved_models/top6Z_over1_impinput.csv")
 Identify important genes for important pathways
 """
 
+# Remember to change model.output in PyTorchDeepExplainer() to the values of the first hidden layer before running the following command
 most_important_features = UnSupShapExplainer(train_overall_df_gene=train_data_gene, train_overall_df_mirna=train_data_mirna, condition_data1=upper_data, condition_data2=lower_data, 
                                              path='saved_models', file_count = "R.HSA.163560",
                                              dimension=276, featureNames=feature_names, maskNames=mask_names, imp_feature=True, imp_mask=False)
